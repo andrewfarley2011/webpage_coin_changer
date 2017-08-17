@@ -7,11 +7,64 @@
     <link rel = "stylesheet" href = "css/style.css">
 </head>
 
+<br>
+<br>
+
 Your coins are as follows... <%=coins_returned%>
 <form method="post" action="/total">
     <input type="hidden" name="cents_given" value="cents"/> 
     <input type="hidden" name="answer" value="answer"/>
 </form>
+
+<html>
+
+<style>
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 240px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+</style>
+
+<body style="text-align:center;">
+
+<div class="tooltip"> 
+	<br>
+	<br>
+	Hover here for date and time.
+	<span class="tooltiptext">
+
+  		<p id="demo"></p>
+
+		<script>
+			document.getElementById("demo").innerHTML = Date();
+		</script> 
+
+	</span>
+</div>
+
+</body>
+
+</html>
+
 
 
 
